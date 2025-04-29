@@ -14,16 +14,18 @@ function App() {
 
   const exportToExcel = () => {
     if (!result) return;
-    const worksheet = XLSX.utils.json_to_sheet([result]);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "Irrigation Data");
+    const worksheet = XLSX.utils.json_to_sheet([result]);//transform the result into a format suitable for Excel
+    const workbook = XLSX.utils.book_new();//create a new workbook
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Irrigation Data");//append the worksheet to the workbook
+    //generate the Excel file and trigger a download
+    //the file will be named "irrigation_data.xlsx"
     XLSX.writeFile(workbook, "irrigation_data.xlsx");
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow">
+            <main className="flex-grow">
         <IrrigationForm onCalculate={handleCalculate} />
         {result && <FloatingButton onClick={exportToExcel} />}
       </main>
