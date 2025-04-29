@@ -24,10 +24,10 @@ function IrrigationForm({ onCalculate }) {
       if (unit === "sqm") convertedArea *= 0.000247105;
 
       const rainfallPerDay = countyData.rainfall / 365;
-      const netWater = Math.max(cropData.waterRequirement - rainfallPerDay, 0);
-      const totalWater = (netWater * convertedArea) / parseFloat(days);
-      const flowRate = totalWater / (60 * 60);
-      const pipeSize = flowRate < 1 ? "1 inch" : flowRate < 2 ? "1.5 inch" : "2 inch";
+      const netWater = Math.max(cropData.waterRequirement - rainfallPerDay, 0);// ensure no negative water requirement
+      const totalWater = (netWater * convertedArea) / parseFloat(days);// calculate total water needed
+      const flowRate = totalWater / (60 * 60);// convert to L/sec
+      const pipeSize = flowRate < 1 ? "1 inch" : flowRate < 2 ? "1.5 inch" : "2 inch";// determine pipe size based on flow rate
 
       const preview = {
         crop: cropData.name,
@@ -38,11 +38,11 @@ function IrrigationForm({ onCalculate }) {
         holdingCapacity: soilData.holdingCapacity,
         county: countyData.county,
         annualRainfall: countyData.rainfall,
-        rainfallPerDay: rainfallPerDay.toFixed(2),
+        rainfallPerDay: rainfallPerDay.toFixed(2),// convert to mm/day
         area: `${area} ${unit}`,
         days,
-        totalWater: totalWater.toFixed(2),
-        flowRate: flowRate.toFixed(2),
+        totalWater: totalWater.toFixed(2),// convert to L/day
+        flowRate: flowRate.toFixed(2),// convert to L/sec
         pipeSize
       };
 
