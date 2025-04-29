@@ -1,0 +1,11 @@
+[
+    { "county": "Nairobi", "rainfall": 800 },
+    { "county": "Mombasa", "rainfall": 1100 },
+    { "county": "Kisumu", "rainfall": 1300 },
+    { "county": "Turkana", "rainfall": 250 },
+    { "county": "Nyeri", "rainfall": 1500 },
+    { "county": "Garissa", "rainfall": 300 },
+    { "county": "Uasin Gishu", "rainfall": 1000 },
+    { "county": "Embu", "rainfall": 1400 }
+  ]
+  

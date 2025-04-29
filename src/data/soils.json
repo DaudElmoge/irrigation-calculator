@@ -1,38 +1,38 @@
 [
     {
       "type": "Sandy",
-      "infiltrationRate": "High",
-      "holdingCapacity": "Low",
+      "infiltrationRate": "20–30 mm/hr",
+      "holdingCapacity": "40–60 mm/m",
       "description": "Common in coastal and arid regions; drains quickly but retains few nutrients."
     },
     {
       "type": "Loamy",
-      "infiltrationRate": "Moderate",
-      "holdingCapacity": "High",
+      "infiltrationRate": "10–20 mm/hr",
+      "holdingCapacity": "100–150 mm/m",
       "description": "Found in Western Kenya and parts of the Rift Valley; fertile and well-drained."
     },
     {
       "type": "Clay (Black Cotton)",
-      "infiltrationRate": "Low",
-      "holdingCapacity": "High",
+      "infiltrationRate": "1–10 mm/hr",
+      "holdingCapacity": "150–200 mm/m",
       "description": "Present in areas like Mwea and Athi; retains water but can become waterlogged."
     },
     {
       "type": "Volcanic (Andosols)",
-      "infiltrationRate": "High",
-      "holdingCapacity": "High",
+      "infiltrationRate": "15–30 mm/hr",
+      "holdingCapacity": "120–180 mm/m",
       "description": "Located in highland areas; rich in minerals and organic matter."
     },
     {
       "type": "Red Soils",
-      "infiltrationRate": "Moderate",
-      "holdingCapacity": "Moderate",
+      "infiltrationRate": "10–15 mm/hr",
+      "holdingCapacity": "80–120 mm/m",
       "description": "Found in highland areas; rich in iron but may require pH management."
     },
     {
       "type": "Alluvial",
-      "infiltrationRate": "Variable",
-      "holdingCapacity": "High",
+      "infiltrationRate": "Variable (5–25 mm/hr)",
+      "holdingCapacity": "100–160 mm/m",
       "description": "Located in river valleys; fertile and suitable for various crops."
     }
   ]
