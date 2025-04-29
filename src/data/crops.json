@@ -1,0 +1,53 @@
+[
+    {
+      "name": "Maize",
+      "waterRequirement": 6000,
+      "season": "March–May (Long rains), October–December (Short rains)"
+    },
+    {
+      "name": "Beans",
+      "waterRequirement": 5000,
+      "season": "March–May, October–December"
+    },
+    {
+      "name": "Tomatoes",
+      "waterRequirement": 8000,
+      "season": "Year-round with irrigation"
+    },
+    {
+      "name": "Potatoes",
+      "waterRequirement": 7000,
+      "season": "March–May, October–December"
+    },
+    {
+      "name": "Cabbage",
+      "waterRequirement": 7500,
+      "season": "Year-round with irrigation"
+    },
+    {
+      "name": "Onions",
+      "waterRequirement": 6000,
+      "season": "Year-round with irrigation"
+    },
+    {
+      "name": "Sukuma Wiki (Kale)",
+      "waterRequirement": 6500,
+      "season": "Year-round with irrigation"
+    },
+    {
+      "name": "Sugarcane",
+      "waterRequirement": 10000,
+      "season": "Year-round"
+    },
+    {
+      "name": "Tea",
+      "waterRequirement": 12000,
+      "season": "Year-round in highland areas"
+    },
+    {
+      "name": "Coffee",
+      "waterRequirement": 10000,
+      "season": "Year-round in highland areas"
+    }
+  ]
+  

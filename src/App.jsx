@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import * as XLSX from "xlsx";
+import IrrigationForm from "./components/IrrigationForm";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [calculation, setCalculation] = useState(null);
+
+  const handleExport = () => {
+    if (!calculation) return;
+
+    const worksheetData = [
+      {
+        Crop: calculation.crop,
+        Soil: calculation.soil,
+        Season: calculation.season,
+        Area: calculation.area,
+        "Days of Irrigation": calculation.days,
+        "Water Needed (L/day)": calculation.totalWater,
+        "Flow Rate (L/s)": calculation.flowRate,
+        "Pipe Size Suggestion": calculation.pipeSize,
+        "Infiltration Rate": calculation.infiltrationRate,
+        "Holding Capacity": calculation.holdingCapacity
+      }
+    ];
+
+    const worksheet = XLSX.utils.json_to_sheet(worksheetData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Irrigation Report");
+
+    XLSX.writeFile(workbook, "irrigation_calculation.xlsx");
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="min-h-screen bg-gray-100 p-6">
+      <h1 className="text-3xl font-bold mb-6 text-center text-green-700">
+        Akbari Irrigation Calculator 🌾💧
+      </h1>
+
+      <div className="max-w-xl mx-auto">
+        <IrrigationForm onCalculate={setCalculation} />
+
+        {calculation && (
+          <button
+            onClick={handleExport}
+            className="mt-6 w-full bg-green-600 text-white font-semibold py-2 px-4 rounded hover:bg-green-700 transition"
+          >
+            Export to Excel
+          </button>
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,39 @@
+[
+    {
+      "type": "Sandy",
+      "infiltrationRate": "High",
+      "holdingCapacity": "Low",
+      "description": "Common in coastal and arid regions; drains quickly but retains few nutrients."
+    },
+    {
+      "type": "Loamy",
+      "infiltrationRate": "Moderate",
+      "holdingCapacity": "High",
+      "description": "Found in Western Kenya and parts of the Rift Valley; fertile and well-drained."
+    },
+    {
+      "type": "Clay (Black Cotton)",
+      "infiltrationRate": "Low",
+      "holdingCapacity": "High",
+      "description": "Present in areas like Mwea and Athi; retains water but can become waterlogged."
+    },
+    {
+      "type": "Volcanic (Andosols)",
+      "infiltrationRate": "High",
+      "holdingCapacity": "High",
+      "description": "Located in highland areas; rich in minerals and organic matter."
+    },
+    {
+      "type": "Red Soils",
+      "infiltrationRate": "Moderate",
+      "holdingCapacity": "Moderate",
+      "description": "Found in highland areas; rich in iron but may require pH management."
+    },
+    {
+      "type": "Alluvial",
+      "infiltrationRate": "Variable",
+      "holdingCapacity": "High",
+      "description": "Located in river valleys; fertile and suitable for various crops."
+    }
+  ]
+  
