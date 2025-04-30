@@ -8,7 +8,7 @@ function Footer() {
         <a href="https://github.com/DaudElmoge" target="_blank" rel="noreferrer">
           <FaGithub className="hover:text-green-600" />
         </a>
-        <a href="https://www.linkedin.com/in/daud-abdiwahab-13703622a/" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/daud-abdiwahab-elmoge/" target="_blank" rel="noreferrer">
           <FaLinkedin className="hover:text-blue-700" />
         </a>
         <a href="mailto:daudwahab1320@gmail.com">
